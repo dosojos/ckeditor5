@@ -52,7 +52,8 @@ function runUmberto( options ) {
 		skipLiveSnippets: options.skipLiveSnippets,
 		skipValidation: options.skipValidation,
 		snippetOptions: {
-			production: options.production
+			production: options.production,
+			whitelistedSnippets: whitelistedSnippets ? whitelistedSnippets.replace( '--whitelisted-snippet=', '' ).split( ',' ) : []
 		},
 		skipApi: options.skipApi,
 		verbose: options.verbose,
